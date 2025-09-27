@@ -251,24 +251,22 @@ p {
 }
 
 .about-item {
-    /* width: calc((100% - 3*24px) / 4); */
     width: 100%;
 }
 
 .about-item-img {
     display: none;
-    /* display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: 112px;
     background-color: #f4f4fd;
     border-radius: 4px;
     border: 1px solid #8e8f99;
-    margin-bottom: 8px; */
+    margin-bottom: 8px;
 }
 
 .item-subtitle {
-    text-align: center;
     margin-bottom: 8px;
 }
 
@@ -280,6 +278,11 @@ p {
 
 .team-section {
     background-color: #f4f4fd;
+}
+
+.team-container {
+    padding-left: 28px;
+    padding-right: 28px;
 }
 
 .team-title {
@@ -296,7 +299,7 @@ p {
 .team-item {
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
-    /* width: calc((100% - 3*24px) / 4); */
+    width: 100%;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin: 0 auto;
@@ -391,8 +394,6 @@ p {
 
 .portf-img {
     display: block;
-    width: 100%;
-    height: 280px;
 }
 
 .portf-discr {
@@ -439,20 +440,24 @@ p {
 
 .footer {
     background-color: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
+    /* padding: 100px 0; */
+
 }
 
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: baseline;
+    gap: 72px;
 }
 
-.footer-container-logo {
-    margin-right: 120px;
-}
+.footer-container-logo {}
 
 .footer-logo {
-    display: inline-block;
+    display: block;
+    text-align: center;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -469,7 +474,6 @@ p {
 }
 
 .footer-text {
-    max-width: 264px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -481,12 +485,11 @@ p {
 
 
 
-.footer-container-link {
-    margin-right: 80px;
-}
+.footer-container-link {}
 
-.footer-text {
+.footer-title {
     font-weight: 500;
+    text-align: center;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -528,7 +531,10 @@ p {
 
 .footer-form {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 24px; */
+    gap: 16px;
 }
 
 .footer-form-label {}
@@ -536,7 +542,8 @@ p {
 .footer-form-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
+
     height: 40px;
     outline: transparent;
     font-weight: 400;
@@ -547,6 +554,7 @@ p {
     padding: 8px 16px;
     background-color: transparent;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -555,6 +563,11 @@ p {
     color: #fff;
     opacity: 1;
 }
+
+.footer-form-input:focus {
+    opacity: 1;
+}
+
 
 .footer-form-btn {
     display: flex;
@@ -571,7 +584,6 @@ p {
     min-width: 165px;
     border: none;
     background-color: #4d5ae5;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 40px;
@@ -802,7 +814,23 @@ p {
 
 
 /* -------------- MEDIA ----------------- */
+@media screen and (max-width: 767px) {
 
+    /* -- ABOUT-SECTION -- */
+
+    .item-subtitle {
+        text-align: center;
+    }
+
+
+
+
+
+    /* -- FOOTER-SECTION -- */
+
+
+
+}
 
 @media screen and (max-width: 1157px) {
 
@@ -818,4 +846,177 @@ p {
     .item-text {
         font-weight: 500;
     }
+
+
+
+
+
+    /* -- FOOTER-SECTION -- */
+
+    .footer-form-input {
+        opacity: 0.3;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    /* -------------- ABOUT-SECTION ----------------- */
+
+    .about-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+
+    .about-item {
+        width: calc((100% - 1*24px) / 2);
+    }
+
+    /* -------------- TEAM-SECTION ----------------- */
+
+
+    .team-container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+
+    .team-list {
+        gap: 64px 24px;
+
+    }
+
+
+    .team-item {
+        width: calc((100% - 1*24px) / 2);
+    }
+
+    /* -------------- PORTFOLIO-SECTION ----------------- */
+    .portf-list {
+        gap: 72px 24px;
+    }
+
+    .portf-item {
+        width: calc((100% - 1*24px) / 2);
+    }
+
+    /* -------- FOOTER --------- */
+
+    .footer-container {
+        justify-content: normal;
+        gap: 0;
+
+
+    }
+
+    .footer-container-logo {
+        margin-right: 24px;
+    }
+
+    .footer-logo {
+        text-align: start;
+    }
+
+    .footer-text {
+        max-width: 264px;
+    }
+
+    .footer-title {
+        text-align: start;
+
+    }
+
+    .footer-form-input {
+        width: 264px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    /* -------------- ABOUT-SECTION ----------------- */
+
+    .about-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+
+    }
+
+    .about-item {
+        width: calc((100% - 3*24px) / 4);
+    }
+
+    .about-item-img {
+        display: flex;
+    }
+
+    /* -------------- TEAM-SECTION ----------------- */
+    .team-list {
+        gap: 24px;
+
+    }
+
+
+    .team-item {
+        width: calc((100% - 3*24px) / 4);
+    }
+
+
+    /* -------------- PORTFOLIO-SECTION ----------------- */
+    .portf-list {
+        gap: 48px 24px;
+    }
+
+    .portf-item {
+        width: calc((100% - 2*24px) / 3);
+    }
+
+    /* -------- FOOTER --------- */
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer-container {}
+    .footer-container-logo {
+        margin-right: 120px;
+    }
+
+    .footer-logo {}
+
+    .footer-text {}
+
+    .footer-container-link {
+        margin-right: 80px;
+    }
+
+    .footer-title {}
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+
+    /* -- FOOTER-SECTION -- */
+    .footer-container {
+        padding-left: 108px;
+    }
+
+    .footer-container-logo {
+        margin-bottom: 72px;
+    }
+
+
 }
