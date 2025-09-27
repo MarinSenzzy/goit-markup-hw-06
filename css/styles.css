@@ -63,14 +63,16 @@ p {
 
 
 .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 320px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    padding-right: 16px;
+    padding-left: 16px;
     margin: 0 auto;
 }
 
 .section {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 /* -------------- HEADER ----------------- */
@@ -243,26 +245,30 @@ p {
 
 .about-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
 
 }
 
 .about-item {
-    width: calc((100% - 3*24px) / 4);
+    /* width: calc((100% - 3*24px) / 4); */
+    width: 100%;
 }
 
 .about-item-img {
-    display: flex;
+    display: none;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     height: 112px;
     background-color: #f4f4fd;
     border-radius: 4px;
     border: 1px solid #8e8f99;
-    margin-bottom: 8px;
+    margin-bottom: 8px; */
 }
 
 .item-subtitle {
+    text-align: center;
     margin-bottom: 8px;
 }
 
@@ -274,7 +280,6 @@ p {
 
 .team-section {
     background-color: #f4f4fd;
-
 }
 
 .team-title {
@@ -284,16 +289,17 @@ p {
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px;
 
 }
 
 .team-item {
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
-    width: calc((100% - 3*24px) / 4);
+    /* width: calc((100% - 3*24px) / 4); */
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
 }
 
 .team-img {
@@ -358,20 +364,20 @@ p {
 .portf-section {}
 
 .portf-title {
+    height: 40px;
     margin-bottom: 72px;
 }
 
 .portf-list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    gap: 48px;
 }
 
 .portf-item {
     position: relative;
-
-    width: calc((100% - 2*24px) / 3);
+    width: 100%;
+    /* width: calc((100% - 2*24px) / 3); */
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -385,6 +391,8 @@ p {
 
 .portf-img {
     display: block;
+    width: 100%;
+    height: 280px;
 }
 
 .portf-discr {
@@ -790,4 +798,24 @@ p {
 .modal-btn-sbm:hover,
 .modal-btn-sbm:focus {
     background: #404bbf;
+}
+
+
+/* -------------- MEDIA ----------------- */
+
+
+@media screen and (max-width: 1157px) {
+
+    /* -- ABOUT-SECTION -- */
+
+    .item-subtitle {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+
+    }
+
+    .item-text {
+        font-weight: 500;
+    }
 }
